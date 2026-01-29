@@ -195,7 +195,7 @@ module.exports = {
 					additionalnotes: 'None',
 					discordid: sentvideo.id,
 					embedDiscordid: sent.id,
-					priority: enablePriorityRole && interaction.member.roles.cache.has(priorityRoleID),
+					priority: enablePriorityRole ? interaction.member.roles.cache.has(priorityRoleID) : false,
 					assigned: 'None',
 				});
 			} catch (error) {
